@@ -17,12 +17,12 @@ return troca;
 
 int main() {
 int tamanho;
-char *palavra;
-string a;
+char *caracteres;
+string palavra;
 cout << "Digite uma palavra: ";
-cin >> a;
+cin >> caracteres;
 
-palavra = &a[0];
+palavra = &caracteres[0];
 
 cout << palavra[1];
 
