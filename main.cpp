@@ -5,25 +5,39 @@
 
 using namespace std;
 
-int trocas(int *ponteiro,char a, char n, int *ponteiro2){
-int troca;
+int trocas(char *ponteiro,int elm,char a, char n, char *ponteiro2){
+int troca=0;
+int i;
 
+for(i=0;i<elm;i++){
+  if (ponteiro[i]==a){
+    ponteiro[i]=n;
+ 
+    troca ++;
+  }
 
+}
 return troca;
 }
 
 
-
-
 int main() {
-int tamanho;
+
 char *caracteres;
 string palavra;
-cout << "Digite uma palavra: ";
-cin >> caracteres;
+char ant;
+char nov;
+char *palavranova;
+cout << "Digite uma palavra:\n";
+cin >> palavra;
+caracteres = &palavra[0];
+int tamanho = strlen(caracteres);
 
-palavra = &caracteres[0];
+cout << "Qual caractere deseja substituir?\n";
+cin >> ant;
+cout << "Qual caractere deseja pôr no lugar?\n";
+cin >> nov;
 
-cout << palavra[1];
+cout << trocas(caracteres,tamanho,ant,nov,palavranova);
 
 }
